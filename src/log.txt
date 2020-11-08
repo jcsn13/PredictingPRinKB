@@ -1,0 +1,159 @@
+############################# Full datasets #############################
+----------------Training dataset_1_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.01, 'loss': 'log', 'n_jobs': -1, 'penalty': 'elasticnet'}
+Best CV accuracy 0.697463768115942
+Test accuracy of best grid search hypers: 0.6708860759493671
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'multi_class': 'multinomial', 'penalty': 'l2'}
+Best CV accuracy 0.7061594202898551
+Test accuracy of best grid search hypers: 0.7468354430379747
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 1, 'gamma': 0.1, 'kernel': 'poly'}
+Best CV accuracy 0.7271739130434783
+Test accuracy of best grid search hypers: 0.7341772151898734
+
+*********Random Forest*********
+Performed GridSearchCV 10
+Best CV params {'criterion': 'gini', 'max_depth': None, 'max_features': 0.5, 'n_estimators': 10}
+Best CV accuracy 0.7353260869565218
+Test accuracy of best grid search hypers: 0.7215189873417721
+
+*********Gradient Boosting Classifier*********
+Performed GridSearchCV 10
+Best CV params {'learning_rate': 0.01, 'max_depth': 10, 'n_estimators': 200}
+Best CV accuracy 0.7353260869565218
+Test accuracy of best grid search hypers: 0.7215189873417721
+----------------Training dataset_3_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.001, 'loss': 'log', 'n_jobs': -1, 'penalty': 'elasticnet'}
+Best CV accuracy 0.7907493061979648
+Test accuracy of best grid search hypers: 0.8516129032258064
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'multi_class': 'auto', 'penalty': 'l2'}
+Best CV accuracy 0.784458834412581
+Test accuracy of best grid search hypers: 0.8387096774193549
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 100, 'gamma': 0.01, 'kernel': 'rbf'}
+Best CV accuracy 0.7885753931544865
+Test accuracy of best grid search hypers: 0.832258064516129
+
+*********Random Forest*********
+Performed GridSearchCV 10
+Best CV params {'criterion': 'entropy', 'max_depth': None, 'max_features': 0.5, 'n_estimators': 15}
+Best CV accuracy 0.7801110083256244
+Test accuracy of best grid search hypers: 0.832258064516129
+
+*********Gradient Boosting Classifier*********
+Performed GridSearchCV 10
+Best CV params {'learning_rate': 0.1, 'max_depth': 12, 'n_estimators': 50}
+Best CV accuracy 0.7800185013876041
+Test accuracy of best grid search hypers: 0.8129032258064516
+
+############################# GWAS datasets #############################
+----------------Training dataset_19_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.0001, 'loss': 'hinge', 'n_jobs': -1, 'penalty': 'l1'}
+Best CV accuracy 0.6880434782608695
+Test accuracy of best grid search hypers: 0.5949367088607594
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'multi_class': 'auto', 'penalty': 'l2'}
+Best CV accuracy 0.6798913043478261
+Test accuracy of best grid search hypers: 0.6455696202531646
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'gamma': 0.1, 'kernel': 'rbf'}
+Best CV accuracy 0.6721014492753623
+Test accuracy of best grid search hypers: 0.6708860759493671
+
+*********Random Forest*********
+Performed GridSearchCV 10
+Best CV params {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'n_estimators': 10}
+Best CV accuracy 0.6842391304347826
+Test accuracy of best grid search hypers: 0.5822784810126582
+
+*********Gradient Boosting Classifier*********
+Performed GridSearchCV 10
+Best CV params {'learning_rate': 0.001, 'max_depth': 12, 'n_estimators': 500}
+Best CV accuracy 0.6887681159420289
+Test accuracy of best grid search hypers: 0.5569620253164557
+----------------Training dataset_20_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.01, 'loss': 'hinge', 'n_jobs': -1, 'penalty': 'l1'}
+Best CV accuracy 0.842885375494071
+Test accuracy of best grid search hypers: 0.8961038961038961
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 0.1, 'multi_class': 'multinomial', 'penalty': 'l2'}
+Best CV accuracy 0.8298418972332016
+Test accuracy of best grid search hypers: 0.8831168831168831
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'gamma': 0.01, 'kernel': 'sigmoid'}
+Best CV accuracy 0.8385375494071147
+Test accuracy of best grid search hypers: 0.8961038961038961
+
+*********Random Forest*********
+Performed GridSearchCV 10
+Best CV params {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'n_estimators': 10}
+Best CV accuracy 0.7774703557312252
+Test accuracy of best grid search hypers: 0.8701298701298701
+
+*********Gradient Boosting Classifier*********
+Performed GridSearchCV 10
+Best CV params {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200}
+Best CV accuracy 0.8167984189723321
+Test accuracy of best grid search hypers: 0.8831168831168831
+----------------Training dataset_21_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.01, 'loss': 'hinge', 'n_jobs': -1, 'penalty': 'l2'}
+Best CV accuracy 0.7388529139685476
+Test accuracy of best grid search hypers: 0.7032258064516129
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 0.1, 'multi_class': 'multinomial', 'penalty': 'l2'}
+Best CV accuracy 0.7345975948196115
+Test accuracy of best grid search hypers: 0.7096774193548387
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'gamma': 0.01, 'kernel': 'poly'}
+Best CV accuracy 0.7562442183163737
+Test accuracy of best grid search hypers: 0.7032258064516129
+
+*********Random Forest*********
+Performed GridSearchCV 10
+Best CV params {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'n_estimators': 20}
+Best CV accuracy 0.747641073080481
+Test accuracy of best grid search hypers: 0.6774193548387096
+
+*********Gradient Boosting Classifier*********
+Performed GridSearchCV 10
+Best CV params {'learning_rate': 0.01, 'max_depth': 12, 'n_estimators': 300}
+Best CV accuracy 0.7500000000000001
+Test accuracy of best grid search hypers: 0.7096774193548387
+finished model training

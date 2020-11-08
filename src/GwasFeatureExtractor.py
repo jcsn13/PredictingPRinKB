@@ -1,0 +1,37 @@
+from sklearn.base import BaseEstimator, TransformerMixin
+
+
+# ################################################## #
+# Author: Jose Claudio Soares                        #
+# Email: joseclaudiosoaresneto@gmail.com             #
+# Date(mm/dd/yyyy): 11/03/2020                       #
+# Github: jcsn13                                     #
+# Credits: github.com/crowegian/AMR_ML               #
+# ################################################## #
+
+
+class GwasFeatureExtractor(BaseEstimator, TransformerMixin):
+    def __init__(self, x_locus_tags, gwas_df, gwas_cut_off=0.1):
+        self.gwasDF = gwas_df
+        self.gwasCutoff = gwas_cut_off
+        self.xLocusTags = x_locus_tags
+
+    def transform(self, x):
+        x = self.cut_off(x)
+
+        return x
+
+    def fit(self):
+        if self.gwasDF is not None:
+            count = 0
+            for i in self.gwasDF['p_vals']:
+                if i > self.gwasCutoff:
+                    drop = self.gwasDF['LOCUS_TAG'][count]
+                    self.gwasDF = self.gwasDF[self.gwasDF['LOCUS_TAG'] != drop]
+                count += 1
+
+        return self
+
+    def cut_off(self, x):
+        x = x.drop(columns=self.gwasDF['LOCUS_TAG'], axis=1)
+        return x
