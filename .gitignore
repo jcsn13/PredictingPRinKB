@@ -130,3 +130,6 @@ dmypy.json
 
 #Pycharm
 .idea
+
+#OSX
+.DS_Store
