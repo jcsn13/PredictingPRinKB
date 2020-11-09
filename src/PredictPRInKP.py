@@ -6,6 +6,7 @@ from src.GwasFeatureExtractor import GwasFeatureExtractor
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.svm import SVC
 from sklearn import metrics
+from sklearn.metrics import plot_roc_curve
 import matplotlib.pyplot as plt
 import numpy as np
 import sys
@@ -76,12 +77,18 @@ class PredictPRinKP:
         return x_train, x_test, y_train, y_test
 
     @staticmethod
-    def print_performance_metrics(grid, name, x_test, y_test):
+    def print_performance_metrics(grid, name, x_test, y_test, dataset, short_name):
         print("\n*********{}*********".format(name))
         print(
             "Performed GridSearchCV 10\nBest CV params {}\nBest CV accuracy {}"
             "\nTest accuracy of best grid search hypers:"
             .format(grid.best_params_, grid.best_score_), grid.score(x_test, y_test))
+
+        curve_name = short_name + " " + dataset
+
+        plot_roc_curve(grid, x_test, y_test, name=curve_name)
+        plt.savefig('../plots/'+curve_name)
+        # plt.show()
 
     def perform_train_full(self):
         print('\n############################# Full datasets #############################')
@@ -94,7 +101,7 @@ class PredictPRinKP:
             self.train_logistic_regression(dataset, metadata, name)
             self.train_SVC(dataset, metadata, name)
             self.train_random_forest(dataset, metadata, name)
-            self.train_GBTC(dataset, metadata, name)
+            # self.train_GBTC(dataset, metadata, name)
         return self
 
     def perform_train_gwas(self):
@@ -109,7 +116,7 @@ class PredictPRinKP:
             self.train_logistic_regression(dataset, metadata, name)
             self.train_SVC(dataset, metadata, name)
             self.train_random_forest(dataset, metadata, name)
-            self.train_GBTC(dataset, metadata, name)
+            # self.train_GBTC(dataset, metadata, name)
         return self
 
     def train_SGDClassifier(self, dataset, metadata, name):
@@ -123,7 +130,7 @@ class PredictPRinKP:
         grid.fit(x_train, y_train)
 
         model_info = ["Stochastic Gradient Descent Classifier", x_test, y_test, "SGDC"]
-        self.print_performance_metrics(grid, model_info[0], model_info[1], model_info[2])
+        self.print_performance_metrics(grid, model_info[0], model_info[1], model_info[2], name, model_info[3])
 
         return self
 
@@ -137,7 +144,7 @@ class PredictPRinKP:
         grid.fit(x_train, y_train)
 
         model_info = ["Logistic Regression", x_test, y_test, "LR"]
-        self.print_performance_metrics(grid, model_info[0], model_info[1], model_info[2])
+        self.print_performance_metrics(grid, model_info[0], model_info[1], model_info[2], name, model_info[3])
 
         return self
 
@@ -151,7 +158,7 @@ class PredictPRinKP:
         grid.fit(x_train, y_train)
 
         model_info = ["Support Vectors Classifier", x_test, y_test, "SVC"]
-        self.print_performance_metrics(grid, model_info[0], model_info[1], model_info[2])
+        self.print_performance_metrics(grid, model_info[0], model_info[1], model_info[2], name, model_info[3])
 
         return self
 
@@ -165,7 +172,7 @@ class PredictPRinKP:
         grid.fit(x_train, y_train)
 
         model_info = ["Gradient Boosting Classifier", x_test, y_test, "GBTC"]
-        self.print_performance_metrics(grid, model_info[0], model_info[1], model_info[2])
+        self.print_performance_metrics(grid, model_info[0], model_info[1], model_info[2], name, model_info[3])
         return self
 
     def train_random_forest(self, dataset, metadata, name):
@@ -178,7 +185,7 @@ class PredictPRinKP:
         grid.fit(x_train, y_train)
 
         model_info = ["Random Forest", x_test, y_test, "RF"]
-        self.print_performance_metrics(grid, model_info[0], model_info[1], model_info[2])
+        self.print_performance_metrics(grid, model_info[0], model_info[1], model_info[2], name, model_info[3])
 
         return self
 
