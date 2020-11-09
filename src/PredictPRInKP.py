@@ -2,7 +2,7 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-from src.GwasFeatureExtractor import GwasFeatureExtractor
+from GwasFeatureExtractor import GwasFeatureExtractor
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.svm import SVC
 from sklearn import metrics
@@ -15,7 +15,7 @@ import pandas as pd
 
 # ################################################## #
 # Author: Jose Claudio Soares                        #
-# Email: joseclaudiosoaresneto@gami.com              #
+# Email: joseclaudiosoaresneto@gmail.com              #
 # Date(mm/dd/yyyy): 11/03/2020                       #
 # Github: jcsn13                                     #
 # Credits: github.com/crowegian/AMR_ML               #
@@ -199,6 +199,7 @@ class PredictPRinKP:
 
 
 if __name__ == "__main__":
+    # Uncomment to genetare log.text
     # stdoutOrigin = sys.stdout
     # sys.stdout = open("log.txt", "w")
 
