@@ -25,7 +25,7 @@ class GwasFeatureExtractor(BaseEstimator, TransformerMixin):
         if self.gwasDF is not None:
             count = 0
             for i in self.gwasDF['p_vals']:
-                if i > self.gwasCutoff:
+                if i <= self.gwasCutoff:
                     drop = self.gwasDF['LOCUS_TAG'][count]
                     self.gwasDF = self.gwasDF[self.gwasDF['LOCUS_TAG'] != drop]
                 count += 1
