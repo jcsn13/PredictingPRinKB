@@ -33,5 +33,7 @@ class GwasFeatureExtractor(BaseEstimator, TransformerMixin):
         return self
 
     def cut_off(self, x):
-        x = x.drop(columns=self.gwasDF['LOCUS_TAG'], axis=1)
+        for i in self.gwasDF['LOCUS_TAG']:
+            if i in x.columns:
+                x = x.drop(columns=i, axis=1)
         return x
