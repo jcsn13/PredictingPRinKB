@@ -239,11 +239,10 @@ class PredictPRinKP:
     def perform_XGB(self, dataset, metadata, name):
         # x_train, x_test, y_train, y_test = self.perform_train_test_split(dataset, metadata)
         #
-        # train_matrix = xgb.DMatrix(x_train, y_trai n)
+        # train_matrix = xgb.DMatrix(x_train, y_train)
         # test_matrix = xgb.DMatrix(x_test, y_test)
         #
         # model = xgb.train()
-
         return self
 
     def main(self):

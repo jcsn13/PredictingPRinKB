@@ -1,0 +1,99 @@
+############################# Full datasets #############################
+----------------Training dataset_1_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.001, 'loss': 'hinge', 'penalty': 'l2'}
+Best CV accuracy 0.8719202898550724
+Test accuracy(confidence interval 0.95) of best grid search hypers: (0.8699019607843138, 0.007097975191562845)
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'penalty': 'l2'}
+Best CV accuracy 0.8719202898550724
+Test accuracy(confidence interval 0.95) of best grid search hypers: (0.8726470588235294, 0.006872321174224328)
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 1, 'gamma': 10, 'kernel': 'rbf'}
+Best CV accuracy 0.893478260869565
+Test accuracy(confidence interval 0.95) of best grid search hypers: (0.8746078431372549, 0.007268781082827553)
+----------------Training dataset_2_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.001, 'loss': 'hinge', 'penalty': 'l2'}
+Best CV accuracy 0.925691699604743
+Test accuracy(confidence interval 0.95) of best grid search hypers: (0.9477, 0.004556429596196692)
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'penalty': 'l2'}
+Best CV accuracy 0.9213438735177866
+Test accuracy(confidence interval 0.95) of best grid search hypers: (0.9499, 0.004337366619591308)
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 1, 'gamma': 1, 'kernel': 'rbf'}
+Best CV accuracy 0.9432806324110674
+Test accuracy(confidence interval 0.95) of best grid search hypers: (0.9339999999999999, 0.004559468684765378)
+----------------Training dataset_3_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.001, 'loss': 'hinge', 'penalty': 'l2'}
+Best CV accuracy 0.84472710453284
+Test accuracy(confidence interval 0.95) of best grid search hypers: (0.866, 0.005255294312784739)
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'penalty': 'l2'}
+Best CV accuracy 0.8469010175763183
+Test accuracy(confidence interval 0.95) of best grid search hypers: (0.87665, 0.004620940371392903)
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 1, 'gamma': 10, 'kernel': 'rbf'}
+Best CV accuracy 0.8707215541165588
+Test accuracy(confidence interval 0.95) of best grid search hypers: (0.9005, 0.0045115259021587095)
+
+############################# GWAS datasets #############################
+----------------Training dataset_19_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.001, 'loss': 'log', 'penalty': 'l1'}
+Best CV accuracy 0.8032608695652174
+Test accuracy(confidence interval 0.95) of best grid search hypers: (0.804607843137255, 0.008462729483801026)
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'penalty': 'l2'}
+Best CV accuracy 0.8032608695652174
+Test accuracy(confidence interval 0.95) of best grid search hypers: (0.8014705882352942, 0.008663101309399082)
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 1, 'gamma': 1, 'kernel': 'rbf'}
+Best CV accuracy 0.8117753623188406
+Test accuracy(confidence interval 0.95) of best grid search hypers: (0.8095098039215687, 0.007706990215376554)
+----------------Training dataset_20_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.001, 'loss': 'log', 'penalty': 'l1'}
+Best CV accuracy 0.9037549407114623
+Test accuracy(confidence interval 0.95) of best grid search hypers: (0.9490999999999999, 0.004413932482906792)
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'penalty': 'l2'}
+Best CV accuracy 0.8994071146245058
+Test accuracy(confidence interval 0.95) of best grid search hypers: (0.9506999999999999, 0.004316321678161638)
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 1, 'gamma': 10, 'kernel': 'rbf'}
+Best CV accuracy 0.9079051383399209
+Test accuracy(confidence interval 0.95) of best grid search hypers: (0.9753000000000001, 0.0032765927859397066)
+----------------Training dataset_21_----------------
