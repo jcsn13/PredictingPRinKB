@@ -1,0 +1,516 @@
+############################# Full datasets #############################
+----------------Training dataset_1_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.001, 'loss': 'log', 'penalty': 'l2'}
+Best CV accuracy 0.8293478260869565
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9197277988662762, 0.008498768229828493)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8946814212206101, 0.009426674775163)
+--> Test accuracy(confidence interval 0.95):(0.890095238095238, 0.00822499355114585)
+--> Test f1(confidence interval 0.95):(0.8599680385658833, 0.010691016481866324)
+--> Test recall(confidence interval 0.95):(0.9324992261780187, 0.012262497540092643)
+--> Test precision(confidence interval 0.95):(0.8102428854066221, 0.01710968542783895)
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'penalty': 'l2'}
+Best CV accuracy 0.863768115942029
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9370384656548341, 0.008193551156787946)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8991672925773184, 0.009670491060726396)
+--> Test accuracy(confidence interval 0.95):(0.8866666666666667, 0.00975423693179248)
+--> Test f1(confidence interval 0.95):(0.8481521959607318, 0.01282224640351032)
+--> Test recall(confidence interval 0.95):(0.9295579540858179, 0.012256112081194955)
+--> Test precision(confidence interval 0.95):(0.805723661243011, 0.01686121478151491)
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 0.001, 'gamma': 10, 'kernel': 'poly'}
+Best CV accuracy 0.8507246376811594
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9063121788790053, 0.010037602258442016)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8970606165208708, 0.008579059128352861)
+--> Test accuracy(confidence interval 0.95):(0.8866666666666667, 0.009123000093749408)
+--> Test f1(confidence interval 0.95):(0.8464553757303328, 0.012664058685833842)
+--> Test recall(confidence interval 0.95):(0.9427780615497333, 0.010330607953644237)
+--> Test precision(confidence interval 0.95):(0.808317111673418, 0.017393954582459476)
+
+*********Random Forest*********
+Performed GridSearchCV 10
+Best CV params {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'n_estimators': 50}
+Best CV accuracy 0.803623188405797
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8661063007788922, 0.011077750347575839)
+--> Test balanced_accuracy(confidence interval 0.95):(0.840373829446295, 0.010502628683525098)
+--> Test accuracy(confidence interval 0.95):(0.8299047619047618, 0.009801060616960618)
+--> Test f1(confidence interval 0.95):(0.7805914165720865, 0.01661811843542204)
+--> Test recall(confidence interval 0.95):(0.8891730072759486, 0.016614594780831757)
+--> Test precision(confidence interval 0.95):(0.7126180362465192, 0.019097602016239404)
+
+*********Gradient Boosting Classifier*********
+Performed GridSearchCV 10
+Best CV params {'learning_rate': 0.1, 'max_depth': 3, 'min_samples_leaf': 20, 'n_estimators': 400, 'subsample': 1.0}
+Best CV accuracy 0.6625
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.7882753556601727, 0.013537618786064751)
+--> Test balanced_accuracy(confidence interval 0.95):(0.7566984522152143, 0.012378610626189421)
+--> Test accuracy(confidence interval 0.95):(0.755047619047619, 0.013548155067640691)
+--> Test f1(confidence interval 0.95):(0.7274624065097159, 0.015293588025616403)
+--> Test recall(confidence interval 0.95):(0.7453953518674882, 0.020385605679713776)
+--> Test precision(confidence interval 0.95):(0.7406199823792367, 0.01831542426169405)
+
+*********XGBoost*********
+Performed GridSearchCV 10
+Best CV params {'colsample_bytree': 0.6, 'gamma': 0.5, 'max_depth': 3, 'min_child_weight': 1, 'subsample': 1.0}
+Best CV accuracy 0.7735507246376812
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8570567103295161, 0.011143329493368588)
+--> Test balanced_accuracy(confidence interval 0.95):(0.7560412597495425, 0.012046578251907913)
+--> Test accuracy(confidence interval 0.95):(0.7495238095238096, 0.011831608321946945)
+--> Test f1(confidence interval 0.95):(0.6861602524746684, 0.016644479904399108)
+--> Test recall(confidence interval 0.95):(0.7842639283374577, 0.020565864563108126)
+--> Test precision(confidence interval 0.95):(0.6290265341277927, 0.021291553295833956)
+----------------Training dataset_2_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.001, 'loss': 'log', 'penalty': 'l2'}
+Best CV accuracy 0.8909090909090909
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9501027075493668, 0.008835570360328766)
+--> Test balanced_accuracy(confidence interval 0.95):(0.9742021225763347, 0.0032709829101221282)
+--> Test accuracy(confidence interval 0.95):(0.9466666666666667, 0.0062985506289680426)
+--> Test f1(confidence interval 0.95):(0.8280691274096845, 0.02499402689280452)
+--> Test recall(confidence interval 0.95):(1.0, 0.0)
+--> Test precision(confidence interval 0.95):(0.7155017020017019, 0.03597812564292086)
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'penalty': 'l2'}
+Best CV accuracy 0.8911067193675889
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9322052582031071, 0.013462553540325243)
+--> Test balanced_accuracy(confidence interval 0.95):(0.976634179616903, 0.0031962573464199514)
+--> Test accuracy(confidence interval 0.95):(0.9617647058823529, 0.0050829157371059495)
+--> Test f1(confidence interval 0.95):(0.8724923617719283, 0.01960633788319417)
+--> Test recall(confidence interval 0.95):(1.0, 0.0)
+--> Test precision(confidence interval 0.95):(0.7604449254449254, 0.028971972936948222)
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'gamma': 0.01, 'kernel': 'rbf'}
+Best CV accuracy 0.8778656126482213
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9395778910630201, 0.01447781909756591)
+--> Test balanced_accuracy(confidence interval 0.95):(0.9625276437041203, 0.0038032707202307636)
+--> Test accuracy(confidence interval 0.95):(0.9274509803921567, 0.008022138397922339)
+--> Test f1(confidence interval 0.95):(0.7973105208357597, 0.028751060560951145)
+--> Test recall(confidence interval 0.95):(1.0, 0.0)
+--> Test precision(confidence interval 0.95):(0.6350473970473971, 0.037670309486304794)
+
+*********Random Forest*********
+Performed GridSearchCV 10
+Best CV params {'criterion': 'entropy', 'max_depth': 15, 'max_features': 'log2', 'n_estimators': 50}
+Best CV accuracy 0.8776679841897232
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9015820486557726, 0.01500596105311848)
+--> Test balanced_accuracy(confidence interval 0.95):(0.9534237230871345, 0.00441279564399853)
+--> Test accuracy(confidence interval 0.95):(0.9217647058823528, 0.008004791270911018)
+--> Test f1(confidence interval 0.95):(0.7221967591518674, 0.031151234368756185)
+--> Test recall(confidence interval 0.95):(1.0, 0.0)
+--> Test precision(confidence interval 0.95):(0.5206572871572872, 0.039173095860099684)
+
+*********Gradient Boosting Classifier*********
+Performed GridSearchCV 10
+Best CV params {'learning_rate': 0.1, 'max_depth': 3, 'min_samples_leaf': 50, 'n_estimators': 400, 'subsample': 1.0}
+Best CV accuracy 0.8861660079051383
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.6778766188652662, 0.023459237720737467)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8995572258523864, 0.009660678500565133)
+--> Test accuracy(confidence interval 0.95):(0.8592156862745097, 0.009826538338616313)
+--> Test f1(confidence interval 0.95):(0.3143485773485773, 0.04045136803566577)
+--> Test recall(confidence interval 0.95):(1.0, 0.0)
+--> Test precision(confidence interval 0.95):(0.21166901616901618, 0.028799880408659783)
+
+*********XGBoost*********
+Performed GridSearchCV 10
+Best CV params {'colsample_bytree': 0.8, 'gamma': 1.5, 'max_depth': 4, 'min_child_weight': 1, 'subsample': 0.6}
+Best CV accuracy 0.8909090909090909
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.7890747350543386, 0.02369096657407015)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8214380430653618, 0.020871463340632695)
+--> Test accuracy(confidence interval 0.95):(0.8745098039215685, 0.009657353522258513)
+--> Test f1(confidence interval 0.95):(0.6219974574788817, 0.033166728203541024)
+--> Test recall(confidence interval 0.95):(0.726015873015873, 0.03726373325221259)
+--> Test precision(confidence interval 0.95):(0.5753184593184593, 0.03740049038398875)
+----------------Training dataset_3_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.001, 'loss': 'log', 'penalty': 'l2'}
+Best CV accuracy 0.8537465309898241
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8852034649705286, 0.007800029414197081)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8665985282686325, 0.008942972220262307)
+--> Test accuracy(confidence interval 0.95):(0.8542028985507246, 0.0076071461661330435)
+--> Test f1(confidence interval 0.95):(0.7241403558061407, 0.015905778684900486)
+--> Test recall(confidence interval 0.95):(0.873436030998112, 0.014467718376333007)
+--> Test precision(confidence interval 0.95):(0.6148292539979491, 0.01727536601183458)
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'penalty': 'l2'}
+Best CV accuracy 0.8623496762257169
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.907536877448498, 0.006953734065007158)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8582593107492109, 0.00808735442918134)
+--> Test accuracy(confidence interval 0.95):(0.8572946859903383, 0.007229225613258708)
+--> Test f1(confidence interval 0.95):(0.7285391077059086, 0.016341324184486066)
+--> Test recall(confidence interval 0.95):(0.845290335921538, 0.015470682430613685)
+--> Test precision(confidence interval 0.95):(0.6584477541178505, 0.0173357677415452)
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 0.001, 'gamma': 10, 'kernel': 'poly'}
+Best CV accuracy 0.8644773358001849
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8632120790245559, 0.008694702702274194)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8150784538181237, 0.01026933737821954)
+--> Test accuracy(confidence interval 0.95):(0.8289855072463769, 0.007768610304625767)
+--> Test f1(confidence interval 0.95):(0.6876250722264458, 0.011840309888911913)
+--> Test recall(confidence interval 0.95):(0.7880470121182667, 0.018060756463428633)
+--> Test precision(confidence interval 0.95):(0.6290282405310516, 0.01755060722911128)
+
+*********Random Forest*********
+Performed GridSearchCV 10
+Best CV params {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'n_estimators': 400}
+Best CV accuracy 0.8214153561517115
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8637757690895823, 0.008293434136845076)
+--> Test balanced_accuracy(confidence interval 0.95):(0.814966449218212, 0.009667182354816301)
+--> Test accuracy(confidence interval 0.95):(0.8071497584541063, 0.008251825562292155)
+--> Test f1(confidence interval 0.95):(0.5908093586026054, 0.01667339026140083)
+--> Test recall(confidence interval 0.95):(0.8083667976903272, 0.017992480299190344)
+--> Test precision(confidence interval 0.95):(0.49420805262062456, 0.019253298889104986)
+
+*********Gradient Boosting Classifier*********
+Performed GridSearchCV 10
+Best CV params {'learning_rate': 0.1, 'max_depth': 5, 'min_samples_leaf': 20, 'n_estimators': 500, 'subsample': 1.0}
+Best CV accuracy 0.8106845513413505
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8211172507577147, 0.009491016644923729)
+--> Test balanced_accuracy(confidence interval 0.95):(0.71072796823141, 0.011494072593268262)
+--> Test accuracy(confidence interval 0.95):(0.7524637681159421, 0.008215437613010884)
+--> Test f1(confidence interval 0.95):(0.5669946949877294, 0.017424442443886613)
+--> Test recall(confidence interval 0.95):(0.6305244531857468, 0.02062350623632724)
+--> Test precision(confidence interval 0.95):(0.48133953779563116, 0.01894605645970922)
+
+*********XGBoost*********
+Performed GridSearchCV 10
+Best CV params {'colsample_bytree': 1.0, 'gamma': 1, 'max_depth': 5, 'min_child_weight': 1, 'subsample': 0.6}
+Best CV accuracy 0.843200740055504
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8384170091334066, 0.008781080225029885)
+--> Test balanced_accuracy(confidence interval 0.95):(0.7548644658168367, 0.010939800456734544)
+--> Test accuracy(confidence interval 0.95):(0.7697584541062802, 0.00829371430225784)
+--> Test f1(confidence interval 0.95):(0.5918206541678925, 0.0175689801847054)
+--> Test recall(confidence interval 0.95):(0.7082765724626001, 0.020399244107895297)
+--> Test precision(confidence interval 0.95):(0.5157364229064338, 0.018359981035565097)
+----------------Training dataset_7_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.001, 'loss': 'log', 'penalty': 'l2'}
+Best CV accuracy 0.8541666666666666
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9594276912272043, 0.005988196479421125)
+--> Test balanced_accuracy(confidence interval 0.95):(0.9259384447987962, 0.007137732413781717)
+--> Test accuracy(confidence interval 0.95):(0.9228571428571426, 0.006403161162120362)
+--> Test f1(confidence interval 0.95):(0.9023823269968623, 0.01020484465310699)
+--> Test recall(confidence interval 0.95):(0.9375204085560124, 0.012542358318167248)
+--> Test precision(confidence interval 0.95):(0.8779294230308162, 0.014837945554904993)
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'penalty': 'l2'}
+Best CV accuracy 0.8677536231884059
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9594655323129928, 0.006840073368979948)
+--> Test balanced_accuracy(confidence interval 0.95):(0.9334201148457442, 0.007372983090486074)
+--> Test accuracy(confidence interval 0.95):(0.9319999999999999, 0.007185894333909281)
+--> Test f1(confidence interval 0.95):(0.9228294012142225, 0.008246527066463435)
+--> Test recall(confidence interval 0.95):(0.9279034517894323, 0.010508678764601839)
+--> Test precision(confidence interval 0.95):(0.939936871636562, 0.010941359349686606)
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 0.001, 'gamma': 10, 'kernel': 'poly'}
+Best CV accuracy 0.8503623188405796
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9533616333390413, 0.0064304703540594465)
+--> Test balanced_accuracy(confidence interval 0.95):(0.9006344049240984, 0.009266759127556336)
+--> Test accuracy(confidence interval 0.95):(0.9001904761904762, 0.008487859724414534)
+--> Test f1(confidence interval 0.95):(0.8833234737733524, 0.011059556598934149)
+--> Test recall(confidence interval 0.95):(0.8356613835128642, 0.015738004651178573)
+--> Test precision(confidence interval 0.95):(0.9479976803955132, 0.00932837039569613)
+
+*********Random Forest*********
+Performed GridSearchCV 10
+Best CV params {'criterion': 'gini', 'max_depth': 15, 'max_features': 'sqrt', 'n_estimators': 200}
+Best CV accuracy 0.8038043478260869
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9427445391960513, 0.007033520857442408)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8666324265842326, 0.010794144974456157)
+--> Test accuracy(confidence interval 0.95):(0.8678095238095237, 0.009261669889292067)
+--> Test f1(confidence interval 0.95):(0.8320494686101059, 0.011138360885494287)
+--> Test recall(confidence interval 0.95):(0.8944859990370825, 0.015210479173853158)
+--> Test precision(confidence interval 0.95):(0.768554387620177, 0.019361449881699674)
+
+*********Gradient Boosting Classifier*********
+Performed GridSearchCV 10
+Best CV params {'learning_rate': 0.01, 'max_depth': 10, 'min_samples_leaf': 20, 'n_estimators': 300, 'subsample': 0.8}
+Best CV accuracy 0.7780797101449275
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8286438006225055, 0.011815572230748398)
+--> Test balanced_accuracy(confidence interval 0.95):(0.7362996561553653, 0.013212700806502244)
+--> Test accuracy(confidence interval 0.95):(0.724, 0.013862564908185215)
+--> Test f1(confidence interval 0.95):(0.6276121543824338, 0.0192793808390954)
+--> Test recall(confidence interval 0.95):(0.7435447373976786, 0.022522543817902)
+--> Test precision(confidence interval 0.95):(0.5752718608211609, 0.020214716500650962)
+
+*********XGBoost*********
+Performed GridSearchCV 10
+Best CV params {'colsample_bytree': 0.6, 'gamma': 2, 'max_depth': 3, 'min_child_weight': 5, 'subsample': 0.6}
+Best CV accuracy 0.7907608695652174
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.7944141022041129, 0.01323029972045127)
+--> Test balanced_accuracy(confidence interval 0.95):(0.7603721411061224, 0.013329063616323031)
+--> Test accuracy(confidence interval 0.95):(0.7586666666666666, 0.013257926203370927)
+--> Test f1(confidence interval 0.95):(0.6987346202079032, 0.017732443384294073)
+--> Test recall(confidence interval 0.95):(0.7669833700298098, 0.01859978506984914)
+--> Test precision(confidence interval 0.95):(0.6415692752952816, 0.019140518924593515)
+
+############################# GWAS datasets #############################
+----------------Training dataset_19_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.001, 'loss': 'log', 'penalty': 'l1'}
+Best CV accuracy 0.8465579710144926
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8764505803184901, 0.01072511340279121)
+--> Test balanced_accuracy(confidence interval 0.95):(0.842492096297659, 0.010426837486487825)
+--> Test accuracy(confidence interval 0.95):(0.8519999999999999, 0.009684116589340302)
+--> Test f1(confidence interval 0.95):(0.8254641181037717, 0.013369703834024341)
+--> Test recall(confidence interval 0.95):(0.8093245639726929, 0.017208898302536045)
+--> Test precision(confidence interval 0.95):(0.8518052895676734, 0.015005991830893043)
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 1, 'penalty': 'l2'}
+Best CV accuracy 0.8509057971014494
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8598645896395396, 0.011248564103052968)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8041217958313687, 0.01042050553408258)
+--> Test accuracy(confidence interval 0.95):(0.8133333333333334, 0.011403105617021065)
+--> Test f1(confidence interval 0.95):(0.779929941618563, 0.014189825673450977)
+--> Test recall(confidence interval 0.95):(0.788827181790804, 0.01930670403232731)
+--> Test precision(confidence interval 0.95):(0.7786288969836577, 0.017594905948281933)
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'gamma': 0.1, 'kernel': 'rbf'}
+Best CV accuracy 0.8467391304347827
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9090836277412325, 0.009134111099133797)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8261169607310475, 0.00995457612446537)
+--> Test accuracy(confidence interval 0.95):(0.8339047619047617, 0.010907233635035872)
+--> Test f1(confidence interval 0.95):(0.7961250593724553, 0.013441589319405466)
+--> Test recall(confidence interval 0.95):(0.8081957494776851, 0.016192583034500004)
+--> Test precision(confidence interval 0.95):(0.8028048335617658, 0.018181133774213577)
+
+*********Random Forest*********
+Performed GridSearchCV 10
+Best CV params {'criterion': 'entropy', 'max_depth': 15, 'max_features': 'sqrt', 'n_estimators': 50}
+Best CV accuracy 0.8336956521739131
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8916898417301047, 0.010515415621858785)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8072141797675012, 0.012128532032090722)
+--> Test accuracy(confidence interval 0.95):(0.8131428571428571, 0.01193995332934058)
+--> Test f1(confidence interval 0.95):(0.7728777348915583, 0.014367279797582951)
+--> Test recall(confidence interval 0.95):(0.8273123889640918, 0.01894719915819204)
+--> Test precision(confidence interval 0.95):(0.7304898704791019, 0.02008269594545661)
+
+*********Gradient Boosting Classifier*********
+Performed GridSearchCV 10
+Best CV params {'learning_rate': 0.1, 'max_depth': 3, 'min_samples_leaf': 20, 'n_estimators': 500, 'subsample': 1.0}
+Best CV accuracy 0.8507246376811596
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8572570743251408, 0.011873813651089565)
+--> Test balanced_accuracy(confidence interval 0.95):(0.7393912914317298, 0.013714984180952369)
+--> Test accuracy(confidence interval 0.95):(0.7443809523809524, 0.012150262515029014)
+--> Test f1(confidence interval 0.95):(0.6855916253904661, 0.015832222866441457)
+--> Test recall(confidence interval 0.95):(0.7687735681071595, 0.019321734023262118)
+--> Test precision(confidence interval 0.95):(0.6471510118994638, 0.021490586669095087)
+
+*********XGBoost*********
+Performed GridSearchCV 10
+Best CV params {'colsample_bytree': 1.0, 'gamma': 1.5, 'max_depth': 4, 'min_child_weight': 1, 'subsample': 1.0}
+Best CV accuracy 0.8719202898550724
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.7872597361247443, 0.01289920411779525)
+--> Test balanced_accuracy(confidence interval 0.95):(0.7685839036106817, 0.01328248612589545)
+--> Test accuracy(confidence interval 0.95):(0.7636190476190476, 0.012482645176085105)
+--> Test f1(confidence interval 0.95):(0.6927159773276274, 0.019882727221715357)
+--> Test recall(confidence interval 0.95):(0.7950080961063933, 0.019341941405639173)
+--> Test precision(confidence interval 0.95):(0.6344446981180727, 0.019857852138226845)
+----------------Training dataset_20_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.001, 'loss': 'log', 'penalty': 'l1'}
+Best CV accuracy 0.8996047430830039
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9146469564688272, 0.015461681088419672)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8821137279778271, 0.016415858064934126)
+--> Test accuracy(confidence interval 0.95):(0.9225490196078429, 0.008016958925695362)
+--> Test f1(confidence interval 0.95):(0.710510480460945, 0.030071793236717853)
+--> Test recall(confidence interval 0.95):(0.8536919191919192, 0.02686897275295426)
+--> Test precision(confidence interval 0.95):(0.69500962000962, 0.03675724481260584)
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 1, 'penalty': 'l2'}
+Best CV accuracy 0.8952569169960473
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8775660684820442, 0.01642286336899506)
+--> Test balanced_accuracy(confidence interval 0.95):(0.9313914679836948, 0.005579892119487262)
+--> Test accuracy(confidence interval 0.95):(0.8856862745098039, 0.008733508486278293)
+--> Test f1(confidence interval 0.95):(0.4822318535724109, 0.04209306040440288)
+--> Test recall(confidence interval 0.95):(1.0, 0.0)
+--> Test precision(confidence interval 0.95):(0.3443194398194398, 0.03206953919880773)
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'gamma': 0.1, 'kernel': 'rbf'}
+Best CV accuracy 0.9169960474308299
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9616437226955441, 0.005784808303411102)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8820267622261136, 0.01692022895366569)
+--> Test accuracy(confidence interval 0.95):(0.8923529411764703, 0.009728717132900008)
+--> Test f1(confidence interval 0.95):(0.5989290748238116, 0.035233115679451664)
+--> Test recall(confidence interval 0.95):(0.8663121693121694, 0.033904735949754454)
+--> Test precision(confidence interval 0.95):(0.5253264790764791, 0.036535088092744014)
+
+*********Random Forest*********
+Performed GridSearchCV 10
+Best CV params {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'n_estimators': 100}
+Best CV accuracy 0.9037549407114625
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9534719420110145, 0.006286701550935455)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8026148453980905, 0.029056479021210585)
+--> Test accuracy(confidence interval 0.95):(0.8425490196078431, 0.011342136366560531)
+--> Test f1(confidence interval 0.95):(0.3166118326118326, 0.0393741343629766)
+--> Test recall(confidence interval 0.95):(0.7997777777777778, 0.05193414996291315)
+--> Test precision(confidence interval 0.95):(0.23831529581529579, 0.03312621852409017)
+
+*********Gradient Boosting Classifier*********
+Performed GridSearchCV 10
+Best CV params {'learning_rate': 0.1, 'max_depth': 10, 'min_samples_leaf': 20, 'n_estimators': 500, 'subsample': 1.0}
+Best CV accuracy 0.8733201581027668
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8591751473389464, 0.017656331177283942)
+--> Test balanced_accuracy(confidence interval 0.95):(0.9041988261675316, 0.01665462459681528)
+--> Test accuracy(confidence interval 0.95):(0.9031372549019606, 0.009393623260355114)
+--> Test f1(confidence interval 0.95):(0.6562395297054738, 0.03538001564012524)
+--> Test recall(confidence interval 0.95):(0.9024894179894177, 0.029202334741390428)
+--> Test precision(confidence interval 0.95):(0.5756918636918638, 0.037112100215422515)
+
+*********XGBoost*********
+Performed GridSearchCV 10
+Best CV params {'colsample_bytree': 0.8, 'gamma': 1, 'max_depth': 4, 'min_child_weight': 1, 'subsample': 0.6}
+Best CV accuracy 0.908102766798419
+Best estimator metrics:
+error roc_auc
+--> Test roc_auc(confidence interval 0.95):(0.8418904031858248, 0.02142449332742274)
+--> Test balanced_accuracy(confidence interval 0.95):(0.900949242118007, 0.01550638188373964)
+--> Test accuracy(confidence interval 0.95):(0.8933333333333331, 0.008657269113070486)
+--> Test f1(confidence interval 0.95):(0.6178526473526472, 0.03545532828768284)
+--> Test recall(confidence interval 0.95):(0.8374100529100529, 0.04002737290156242)
+--> Test precision(confidence interval 0.95):(0.4786669071669072, 0.036336171247230514)
+----------------Training dataset_21_----------------
+
+*********Stochastic Gradient Descent Classifier*********
+Performed GridSearchCV 10
+Best CV params {'alpha': 0.001, 'loss': 'log', 'penalty': 'l2'}
+Best CV accuracy 0.8925069380203515
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.90603897853336, 0.007918865888567037)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8708015760646028, 0.0074815607817990196)
+--> Test accuracy(confidence interval 0.95):(0.893816425120773, 0.0063989561582984)
+--> Test f1(confidence interval 0.95):(0.8196267188935735, 0.010941346726563073)
+--> Test recall(confidence interval 0.95):(0.8287424044776628, 0.013180612771168054)
+--> Test precision(confidence interval 0.95):(0.8290572372603975, 0.01525562847715189)
+
+*********Logistic Regression*********
+Performed GridSearchCV 10
+Best CV params {'C': 10, 'penalty': 'l2'}
+Best CV accuracy 0.90527289546716
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8989725809802644, 0.009111234309423405)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8933320233014687, 0.0072205873609688664)
+--> Test accuracy(confidence interval 0.95):(0.9038647342995171, 0.005893008635900899)
+--> Test f1(confidence interval 0.95):(0.8358778713057707, 0.01139395394383914)
+--> Test recall(confidence interval 0.95):(0.8705531339439453, 0.013020797565650987)
+--> Test precision(confidence interval 0.95):(0.8094302878180699, 0.015458637018947766)
+
+*********Support Vectors Classifier*********
+Performed GridSearchCV 10
+Best CV params {'C': 0.001, 'gamma': 1, 'kernel': 'poly'}
+Best CV accuracy 0.8902405180388531
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.899498195829694, 0.008748727662636482)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8583442551855008, 0.008612495267818649)
+--> Test accuracy(confidence interval 0.95):(0.8786473429951691, 0.006926048237234693)
+--> Test f1(confidence interval 0.95):(0.8020798460230952, 0.012453486485544368)
+--> Test recall(confidence interval 0.95):(0.8300651991920758, 0.014090437641151839)
+--> Test precision(confidence interval 0.95):(0.7917769594918158, 0.014651913674541422)
+
+*********Random Forest*********
+Performed GridSearchCV 10
+Best CV params {'criterion': 'gini', 'max_depth': 15, 'max_features': 'sqrt', 'n_estimators': 100}
+Best CV accuracy 0.8903792784458835
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9205586368790709, 0.006314202786707469)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8249171980416525, 0.009002641663552585)
+--> Test accuracy(confidence interval 0.95):(0.842608695652174, 0.006829166907329946)
+--> Test f1(confidence interval 0.95):(0.7223455969661594, 0.013745832613000233)
+--> Test recall(confidence interval 0.95):(0.770752654305075, 0.018038495095184424)
+--> Test precision(confidence interval 0.95):(0.6850592376835296, 0.01591164683792085)
+
+*********Gradient Boosting Classifier*********
+Performed GridSearchCV 10
+Best CV params {'learning_rate': 0.1, 'max_depth': 3, 'min_samples_leaf': 20, 'n_estimators': 100, 'subsample': 1.0}
+Best CV accuracy 0.8772895467160037
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.8508146362317283, 0.008123451531076435)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8312657500464091, 0.008789581619858901)
+--> Test accuracy(confidence interval 0.95):(0.8349758454106281, 0.007201549786283341)
+--> Test f1(confidence interval 0.95):(0.6758742642801402, 0.015565450089393541)
+--> Test recall(confidence interval 0.95):(0.8137838669496699, 0.018630615887362523)
+--> Test precision(confidence interval 0.95):(0.5814431796990999, 0.019008145885134824)
+
+*********XGBoost*********
+Performed GridSearchCV 10
+Best CV params {'colsample_bytree': 0.8, 'gamma': 1, 'max_depth': 5, 'min_child_weight': 1, 'subsample': 0.8}
+Best CV accuracy 0.8901942645698426
+Best estimator metrics:
+--> Test roc_auc(confidence interval 0.95):(0.9243779029896749, 0.0057452225421811476)
+--> Test balanced_accuracy(confidence interval 0.95):(0.8793718933580668, 0.007288275495488473)
+--> Test accuracy(confidence interval 0.95):(0.8887922705314009, 0.006271600165082347)
+--> Test f1(confidence interval 0.95):(0.7988262114760981, 0.01029698245512204)
+--> Test recall(confidence interval 0.95):(0.8592431244941474, 0.014252694350599792)
+--> Test precision(confidence interval 0.95):(0.7467221738097694, 0.015464566788904514)
+finished model training

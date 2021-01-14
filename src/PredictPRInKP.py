@@ -68,7 +68,7 @@ class PredictPRinKP:
 
     def mean_confidence_interval(self, grid, x_test, y_test, xgboost, confidence=0.96, scoring='accuracy'):
         score_array = []
-        for i in range(200):
+        for i in range(150):
             x_sample_array = []
             y_sample_array = []
 
@@ -175,22 +175,24 @@ class PredictPRinKP:
 
     def perform_feature_selection(self, dataset, metadata, gwas=False):
         lenght_features = dataset[0].shape[1]
-        n_features = int(0.1 * lenght_features)
+        # n_features = int(0.1 * lenght_features)
 
         if gwas is True:
             gwas_feature_extractor = GwasFeatureExtractor(x_locus_tags=dataset[1]['LOCUS_TAG'], gwas_df=dataset[1])
             gwas_feature_extractor.fit()
             dataset[0] = gwas_feature_extractor.transform(dataset[0])
             lenght_features = dataset[0].shape[1]
-            n_features = int(0.5 * lenght_features)  # to keep approx 200 features
+            # n_features = int(0.5 * lenght_features)  # to keep approx 200 features
+
+        n_features = 235
 
         encoder = LabelEncoder()
         isolate_column = dataset[0].columns[0]
         dataset[0][isolate_column] = encoder.fit_transform(dataset[0][isolate_column])
 
         estimator = SVC(kernel='linear', random_state=self.SEED)
-        # selector = RFECV(estimator=estimator, cv=10, min_features_to_select=n_features, step=1)
-        selector = RFE(estimator=estimator, n_features_to_select=n_features, step=1)
+        selector = RFECV(estimator=estimator, cv=10, step=1, min_features_to_select=n_features, scoring='accuracy')
+        # selector = RFE(estimator=estimator, n_features_to_select=n_features, step=1)
         selector = selector.fit(dataset[0], metadata[0].values.ravel())
         selected_features = dataset[0].columns[selector.support_]
         dataset[0] = dataset[0].filter(selected_features)
@@ -308,7 +310,7 @@ if __name__ == "__main__":
     # stdoutOrigin = sys.stdout
     # sys.stdout = open("log_fs_SVN_50estimators.txt", "w")
 
-    df01 = ['dataset_1_', 'dataset_2_', 'dataset_3_']
+    df01 = ['dataset_1_', 'dataset_2_', 'dataset_3_', 'dataset_7_']
     df02 = ['dataset_19_', 'dataset_20_', 'dataset_21_']
 
     PR = PredictPRinKP(datasets_full=df01, datasets_gwas=df02)
