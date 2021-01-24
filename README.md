@@ -14,7 +14,7 @@ There are two types of data:
 
 - Datasets with GWAS filtering -> Uses a metadata, gwas, and full.
 
-Check the previous repository to get a deeper insight, and also read https://msystems.asm.org/content/5/3/e00656-19. 
+Check the previous repository to get a deeper insight, and also read: https://msystems.asm.org/content/5/3/e00656-19. 
 
 # Running the pipeline
 
