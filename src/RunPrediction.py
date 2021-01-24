@@ -1,0 +1,76 @@
+import sys
+import joblib as jb
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from PredictPRInKP import PredictPRinKP
+from sklearn.metrics import plot_roc_curve, accuracy_score, roc_auc_score, balanced_accuracy_score, f1_score, \
+    recall_score, precision_score
+
+SEED = PredictPRinKP().SEED
+
+def read_dataset(dataset, gwas):
+    if gwas is True:
+        df_train = pd.read_csv('../data/'+dataset+'train.csv')
+
+        df_test = pd.read_csv('../data/'+ dataset+'test.csv')
+
+        df_full = pd.concat([df_test, df_train])
+
+        metadata = df_full[['pbr_res']]
+        df_full = df_full.drop(columns=['pbr_res'], axis=1)
+
+    else:
+        df_full = pd.read_csv('../data/' + dataset + 'full.csv')
+        df_full.set_index('isolate', drop=True, inplace=True)
+
+        metadata = df_full[['pbr_res']]
+        df_full = df_full.drop(columns=['pbr_res'], axis=1)
+
+    selected_features = pd.read_csv('../selected_features/'+dataset+'.csv')
+
+    return df_full, metadata, selected_features
+
+
+def get_test_set(dataset, metadata, selected_features):
+    print(dataset)
+    dataset = dataset.loc[:,selected_features['Features']]
+    print(dataset)
+    x_train, x_test, y_train, y_test = train_test_split(dataset.values, metadata.values.ravel(),
+                                                            test_size=0.25, random_state=SEED,
+                                                            stratify=metadata.values.ravel())
+
+    return x_test, y_test
+
+def run_prediction(x_test, y_test, model, dataset):
+
+    model_path = '../models/'+dataset+'/'+dataset+model+'.pkl'
+    saved_model = jb.load(model_path)
+
+    pred = saved_model.predict(x_test)
+    proba = saved_model.predict_proba(x_test)[:, 1]
+
+    metrics = ['roc_auc', 'balanced_accuracy', 'accuracy', 'f1', 'recall', 'precision']
+
+    print('Metrics:')
+    print('Roc_auc ->', roc_auc_score(y_test, proba))
+    print('BACC ->', balanced_accuracy_score(pred, y_test))
+    print('Accuracy ->', accuracy_score(pred, y_test))
+    print('f1 ->', f1_score(pred, y_test))
+    print('Recall ->', recall_score(pred, y_test))
+    print('Precision ->', precision_score(pred, y_test))
+    
+
+def main(args):
+    
+    df, metadata, selected_features = read_dataset(args[0], args[1])
+
+    x_test, y_test = get_test_set(df, metadata, selected_features)
+
+    run_prediction(x_test, y_test, args[2], args[0])
+
+    return 1
+
+
+if __name__ == "__main__":
+    args = sys.argv[1:]
+    main(args)
