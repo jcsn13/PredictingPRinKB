@@ -68,11 +68,11 @@ class PredictPRinKP:
 
     def mean_confidence_interval(self, grid, x_test, y_test, xgboost, confidence=0.95, scoring='accuracy'):
         score_array = []
-        for i in range(100):
+        for i in range(10):
             x_sample_array = []
             y_sample_array = []
 
-            range_ = int(len(y_test) * 0.4)
+            range_ = int(len(y_test) * 0.25)
 
             for j in range(range_):
                 index = np.random.randint(0, len(x_test) - 1)
@@ -186,15 +186,18 @@ class PredictPRinKP:
         return self
 
     def perform_feature_selection(self, dataset, metadata, dataset_name, gwas=False):
+        
+        n_features = 200
+        
         if gwas is True:
             gwas_feature_extractor = GwasFeatureExtractor(x_locus_tags=dataset[1]['LOCUS_TAG'], gwas_df=dataset[1])
             gwas_feature_extractor.fit()
             dataset[0] = gwas_feature_extractor.transform(dataset[0])
+            n_features = 100
 
         encoder = LabelEncoder()
         isolate_column = dataset[0].columns[0]
         dataset[0][isolate_column] = encoder.fit_transform(dataset[0][isolate_column])
-        n_features = 200
 
         estimator = SVC(kernel='linear', random_state=self.SEED)
         selector = RFECV(estimator=estimator, cv=10, step=1, min_features_to_select=n_features, scoring='roc_auc')
@@ -326,8 +329,8 @@ class PredictPRinKP:
     def main(self):
         self.read_datasets()
 
-        # if self.dataset_full:
-        #     self.perform_train_full()
+        if self.dataset_full:
+            self.perform_train_full()
         if self.datasets_gwas:
             self.perform_train_gwas()
 

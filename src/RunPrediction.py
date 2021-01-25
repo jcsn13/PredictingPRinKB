@@ -6,6 +6,16 @@ from PredictPRInKP import PredictPRinKP
 from sklearn.metrics import plot_roc_curve, accuracy_score, roc_auc_score, balanced_accuracy_score, f1_score, \
     recall_score, precision_score
 
+
+# ################################################## #
+# Author: Jose Claudio Soares                        #
+# Email: joseclaudiosoaresneto@gmail.com             #
+# Date(mm/dd/yyyy): 11/03/2020                       #
+# Github: jcsn13                                     #
+# Credits: github.com/crowegian/AMR_ML               #
+# ################################################## #
+
+
 SEED = PredictPRinKP().SEED
 
 def read_dataset(dataset, gwas):
