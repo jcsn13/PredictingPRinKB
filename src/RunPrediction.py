@@ -1,9 +1,11 @@
+"""Run prediction script."""
 import sys
 import joblib as jb
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from PredictPRInKP import PredictPRinKP
-from sklearn.metrics import plot_roc_curve, accuracy_score, roc_auc_score, balanced_accuracy_score, f1_score, \
+from sklearn.metrics import accuracy_score, roc_auc_score,\
+    balanced_accuracy_score, f1_score, \
     recall_score, precision_score
 
 
@@ -18,11 +20,13 @@ from sklearn.metrics import plot_roc_curve, accuracy_score, roc_auc_score, balan
 
 SEED = PredictPRinKP().SEED
 
-def read_dataset(dataset, gwas):
-    if gwas is True:
-        df_train = pd.read_csv('../data/'+dataset+'train.csv')
 
-        df_test = pd.read_csv('../data/'+ dataset+'test.csv')
+def read_dataset(dataset, gwas):
+    """Read datasets .csv ."""
+    if gwas is True:
+        df_train = pd.read_csv('../data/' + dataset + 'train.csv')
+
+        df_test = pd.read_csv('../data/' + dataset + 'test.csv')
 
         df_full = pd.concat([df_test, df_train])
 
@@ -36,30 +40,31 @@ def read_dataset(dataset, gwas):
         metadata = df_full[['pbr_res']]
         df_full = df_full.drop(columns=['pbr_res'], axis=1)
 
-    selected_features = pd.read_csv('../selected_features/'+dataset+'.csv')
+    selected_features = pd.read_csv('../selected_features/' + dataset + '.csv')
 
     return df_full, metadata, selected_features
 
 
 def get_test_set(dataset, metadata, selected_features):
-    print(dataset)
-    dataset = dataset.loc[:,selected_features['Features']]
-    print(dataset)
-    x_train, x_test, y_train, y_test = train_test_split(dataset.values, metadata.values.ravel(),
-                                                            test_size=0.25, random_state=SEED,
-                                                            stratify=metadata.values.ravel())
+    """Get train/test set with selected features."""
+    dataset = dataset.loc[:, selected_features['Features']]
+    x_train, x_test, y_train, y_test = \
+        train_test_split(dataset.values,
+                         metadata.values.ravel(),
+                         test_size=0.25,
+                         random_state=SEED,
+                         stratify=metadata.values.ravel())
 
     return x_test, y_test
 
-def run_prediction(x_test, y_test, model, dataset):
 
-    model_path = '../models/'+dataset+'/'+dataset+model+'.pkl'
+def run_prediction(x_test, y_test, model, dataset):
+    """Run Model predictions and print metrics."""
+    model_path = '../models/' + dataset + '/' + dataset + model + '.pkl'
     saved_model = jb.load(model_path)
 
     pred = saved_model.predict(x_test)
     proba = saved_model.predict_proba(x_test)[:, 1]
-
-    metrics = ['roc_auc', 'balanced_accuracy', 'accuracy', 'f1', 'recall', 'precision']
 
     print('Metrics:')
     print('Roc_auc ->', roc_auc_score(y_test, proba))
@@ -68,10 +73,10 @@ def run_prediction(x_test, y_test, model, dataset):
     print('f1 ->', f1_score(pred, y_test))
     print('Recall ->', recall_score(pred, y_test))
     print('Precision ->', precision_score(pred, y_test))
-    
+
 
 def main(args):
-    
+    """Main run prediction functions."""
     df, metadata, selected_features = read_dataset(args[0], args[1])
 
     x_test, y_test = get_test_set(df, metadata, selected_features)

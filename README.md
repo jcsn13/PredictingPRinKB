@@ -22,10 +22,11 @@ Firstly, you need to activate the virtual environment running:
 `source .env/bin/activate`
 
 ## Running Model Training
-The following script will train all the models, it should take at least 6h. The trained models will be saved into the models folder, the same will happen with the roc_auc plots. 
+The following script will train all the models, should take at least 6h. The trained models will be saved into the models folder, the same will happen with the roc_auc plots. 
 
 `python PredictPRinKP.py`
 
 ## Running prediction 
+
 
 ## Extracting feature importance
