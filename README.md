@@ -154,7 +154,7 @@ This is a faster way of getting models performancem since they were trained befo
 
   
 
-# Obtained Results
+# Obtained Results - ML Pipeline
 
   
 
@@ -199,3 +199,23 @@ To compare our models with the ones reported in the article, we used AUROC score
 | Ref-based(ours)                                      | LR 0.951(0.928, 0.973)            | SVC 0.939 (0.895, 0.984)  | LR 0.915 (0.897, 0.933)  |
 | Ref-based with GWAS(ours)                            | LR 0.931 (0.905, 0.956)           | SVC 0.982 (0.974, 0.990)  | SVC 0.956 (0.945, 0.966) |
 | Ref-based value with polymyxin exposure  data(ours)  | SDGC 0.964 (0.95, 0.978)          | -                         | -                        |
+
+
+
+# Bio-informatics Pipeline
+
+![myxin%20Resistance%20in%20Kleb%20e0e9934f7689470c8b047acbbbbe3341/Screen_Shot_2021-04-25_at_18.03.09.png](https://github.com/jcsn13/PredictingPRinKB/blob/master/images/Screen%20Shot%202021-04-25%20at%2021.49.02.png)
+
+
+## About the data
+During the development, we obtained data of isolates that were analyzed by the USP Laboratory of Microbiology. That allowed us to test our pipeline with extra external data.
+However, to do that we need to develop a Pipeline to transform the obtained isolates into the format of our input matrix. To achieve that we need to follow the steps that were described in the referenced paper in the section of **Data Set Preparation**.
+
+
+## Data Preparation
+To achieve the dataset that we need, the following steps are necessary:
+
+- Get the assembly KP0228 from ncbi (https://www.ncbi.nlm.nih.gov/bioproject/PRJNA557275)
+- Run Snippy using `-contigs`mode to generate variant calling 
+- Use ISseeker to identify presency of IS elements
+- Use BLAST to increase sensitivity detection of canonical genes
